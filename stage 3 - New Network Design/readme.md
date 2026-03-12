@@ -225,13 +225,12 @@ Provides:
 
 ## Network Design
 
-![image.png](attachment:1b3de6c3-5187-45b7-a3cc-345cd8a5f20a:image.png)
+![image](https://github.com/jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/blob/main/stage%203%20-%20New%20Network%20Design/Screenshots/Network%20Design.png?raw=true)
 
 ## GNS3 + VMware Integration
+![image](https://github.com/jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/blob/main/stage%203%20-%20New%20Network%20Design/Screenshots/GNS3.png?raw=true)
 
-![image.png](attachment:bddaaa04-b4b1-4137-b1f1-51330a741633:image.png)
-
-![{8ACCC0C0-E347-421A-9626-46C01CE5949E}.png](attachment:7a414fc7-df4e-466e-aa66-d443d0cc9483:8ACCC0C0-E347-421A-9626-46C01CE5949E.png)
+![image](https://github.com/jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/blob/main/stage%203%20-%20New%20Network%20Design/Screenshots/VMWare.png?raw=true)
 
 ---
 
@@ -253,7 +252,4 @@ This project is part of a **multi-stage cybersecurity lab focused on enterprise 
 
 Future stages will include:
 
-- Attack simulation
-- Threat detection with Splunk
-- Endpoint monitoring with Wazuh
-- Incident response workflows
+- Hardening the network using existing benchmarks and threats.
