@@ -1,0 +1,175 @@
+! upgrade fpd auto
+version 12.4
+no service pad
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime show-timezone
+service timestamps log datetime msec
+service password-encryption
+service sequence-numbers
+!
+hostname EXTR1
+!
+boot-start-marker
+boot-end-marker
+!
+security authentication failure rate 10 log
+security passwords min-length 6
+logging message-counter syslog
+logging console critical
+enable secret 5 <ENABLE_SECRET_HASH>
+enable password 7 <ENABLE_PASSWORD_OBFUSCATED>
+!
+aaa new-model
+!
+!
+aaa authentication login local_auth local
+aaa authorization exec default local
+!
+!
+aaa session-id common
+clock timezone UTC -4
+no ip source-route
+no ip gratuitous-arps
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip bootp server
+ip domain name <INTERNAL_DOMAIN>
+login block-for 120 attempts 3 within 60
+login on-failure log
+login on-success log
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+username netadmin password 7 <NETADMIN_PASSWORD_OBFUSCATED>
+archive
+ log config
+  logging enable
+  hidekeys
+!
+!
+!
+!
+!
+ip tcp synwait-time 5
+ip tcp intercept list autosec_tcp_intercept_list
+ip tcp intercept connection-timeout 3600
+ip tcp intercept watch-timeout 15
+ip tcp intercept max-incomplete low 5 high 10
+ip tcp intercept drop-mode random
+ip ssh time-out 60
+ip ssh version 2
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address dhcp
+ ip verify unicast source reachable-via rx allow-default 100
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ ip nat outside
+ ip virtual-reassembly
+ duplex half
+ no mop enabled
+!
+interface FastEthernet1/0
+ ip address <LAN_GATEWAY_IP> <LAN_SUBNET_MASK>
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ ip nat inside
+ ip virtual-reassembly
+ duplex full
+ speed 100
+ no keepalive
+ no mop enabled
+!
+interface FastEthernet1/1
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ shutdown
+ duplex auto
+ speed auto
+ no mop enabled
+!
+ip forward-protocol nd
+ip route <STATIC_ROUTE_NETWORK> <STATIC_ROUTE_MASK> <NEXT_HOP_IP>
+no ip http server
+no ip http secure-server
+!
+!
+ip nat inside source list 1 interface FastEthernet0/0 overload
+!
+ip access-list standard MGMT-ACCESS
+ permit <MGMT_SUBNET> <MGMT_WILDCARD>
+ deny   any
+!
+!
+logging facility local2
+logging <SYSLOG_SERVER_IP>
+access-list 1 permit <LAN_SUBNET> <LAN_WILDCARD>
+access-list 100 permit udp any any eq bootpc
+no cdp log mismatch duplex
+no cdp run
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+gatekeeper
+ shutdown
+!
+banner motd This device is property of BYBANK. UNAUTHORIZED ACCESS IS PROHIBITED.
+!
+line con 0
+ exec-timeout 5 0
+ privilege level 15
+ logging synchronous
+ login authentication local_auth
+ transport output none
+ stopbits 1
+line aux 0
+ privilege level 15
+ logging synchronous
+ login authentication local_auth
+ transport output none
+ stopbits 1
+line vty 0 4
+ access-class MGMT-ACCESS in
+ login authentication local_auth
+ transport input ssh
+!
+end
