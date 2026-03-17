@@ -1,0 +1,182 @@
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+service compress-config
+!
+hostname BYBANKSW
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging console
+enable secret 5 <ENABLE_SECRET_HASH>
+!
+username netadmin privilege 15 secret 5 <NETADMIN_SECRET_HASH>
+aaa new-model
+!
+!
+aaa authentication login default local
+aaa authorization exec default local
+!
+!
+!
+!
+!
+!
+aaa session-id common
+!
+!
+!
+!
+!
+no ip source-route
+ip arp inspection vlan 10
+!
+!
+!
+ip dhcp snooping vlan 10
+ip dhcp snooping
+no ip bootp server
+no ip domain-lookup
+ip domain-name <INTERNAL_DOMAIN>
+ip cef
+login block-for 120 attempts 3 within 60
+login on-failure log
+login on-success log
+no ipv6 cef
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast edge default
+spanning-tree extend system-id
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ switchport access vlan 10
+ switchport mode access
+ ip arp inspection trust
+ negotiation auto
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+ ip arp inspection trust
+ negotiation auto
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/2
+ negotiation auto
+!
+interface GigabitEthernet0/3
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ negotiation auto
+!
+interface GigabitEthernet1/1
+ negotiation auto
+!
+interface GigabitEthernet1/2
+ negotiation auto
+!
+interface GigabitEthernet1/3
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ negotiation auto
+!
+interface GigabitEthernet2/1
+ negotiation auto
+!
+interface GigabitEthernet2/2
+ negotiation auto
+!
+interface GigabitEthernet2/3
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ negotiation auto
+!
+interface GigabitEthernet3/1
+ negotiation auto
+!
+interface GigabitEthernet3/2
+ negotiation auto
+!
+interface GigabitEthernet3/3
+ negotiation auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address <VLAN10_IP> <VLAN10_SUBNET_MASK>
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip route <STATIC_ROUTE_NETWORK> <STATIC_ROUTE_MASK> <NEXT_HOP_IP>
+ip ssh time-out 60
+ip ssh version 2
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+ip access-list standard MGMT-ACCESS
+ permit <MGMT_SUBNET> <MGMT_WILDCARD>
+ deny   any
+!
+!
+logging host <SYSLOG_SERVER_IP>
+!
+!
+!
+!
+!
+!
+control-plane
+!
+banner exec ^C
+Unauthorized access prohibited. BYBANK property.
+^C
+banner incoming ^C
+Unauthorized access prohibited. BYBANK property.
+^C
+banner login ^C
+Unauthorized access prohibited. BYBANK property.
+^C
+banner motd ^C
+Unauthorized access prohibited. BYBANK property.
+^C
+!
+line con 0
+ exec-timeout 5 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ access-class MGMT-ACCESS in
+ exec-timeout 5 0
+ transport input ssh
+!
+!
+end
