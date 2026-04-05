@@ -113,50 +113,50 @@ Wazuh was used to run CIS benchmark checks on all endpoints before and after app
 ### BYBANKSPLUNK
 
 **Before Hardening**
-![BYBANKSPLUNK Before](screenshots/bybanksplunk_before.png)
+![BYBANKSPLUNK Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYYBANKSPLUNK.png)
 
 **After Hardening**
-![BYBANKSPLUNK After](screenshots/bybanksplunk_after.png)
+![BYBANKSPLUNK After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKSPLUNK.png)
 
 ---
 
 ### BYBANKDB
 
 **Before Hardening**
-![BYBANKDB Before](screenshots/bybankdb_before.png)
+![BYBANKDB Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - Database.png)
 
 **After Hardening**
-![BYBANKDB After](screenshots/bybankdb_after.png)
+![BYBANKDB After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKDB.png)
 
 ---
 
 ### BYBANKANSCTRL
 
 **Before Hardening**
-![BYBANKANSCTRL Before](screenshots/bybankansctrl_before.png)
+![BYBANKANSCTRL Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYBANKANSCTRL.png)
 
 **After Hardening**
-![BYBANKANSCTRL After](screenshots/bybankansctrl_after.png)
+![BYBANKANSCTRL After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKANSCTRL.png)
 
 ---
 
 ### BYBANKWeb
 
 **Before Hardening**
-![BYBANKWeb Before](screenshots/bybankweb_before.png)
+![BYBANKWeb Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYBANKWEB.png)
 
 **After Hardening**
-![BYBANKWeb After](screenshots/bybankweb_after.png)
+![BYBANKWeb After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKWEB.png)
 
 ---
 
 ### BYBANKWAZUH
 
 **Before Hardening**
-![BYBANKWAZUH Before](screenshots/bybankwazuh_before.png)
+![BYBANKWAZUH Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYBANKWAZUH.png)
 
 **After Hardening**
-![BYBANKWAZUH After](screenshots/bybankwazuh_after.png)
+![BYBANKWAZUH After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKWAZUH.png)
 
 ---
 
