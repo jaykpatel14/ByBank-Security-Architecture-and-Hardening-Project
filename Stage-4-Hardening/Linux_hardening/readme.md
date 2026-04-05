@@ -115,49 +115,56 @@ Wazuh was used to run CIS benchmark checks on all endpoints before and after app
 **Before Hardening**
 <img width="1891" height="913" alt="image" src="https://github.com/user-attachments/assets/f41bbf71-5875-4ddb-8a60-8a9d3cfaa389" />
 
-
 **After Hardening**
-![BYBANKSPLUNK After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKSPLUNK.png)
+<img width="1887" height="917" alt="image" src="https://github.com/user-attachments/assets/77c9f866-82b2-40d7-b245-fafa12368419" />
+
 
 ---
 
 ### BYBANKDB
 
 **Before Hardening**
-![BYBANKDB Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - Database.png)
+<img width="1892" height="915" alt="image" src="https://github.com/user-attachments/assets/769a3c29-b05c-43d9-8c35-c1d7226ab456" />
 
 **After Hardening**
-![BYBANKDB After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKDB.png)
+<img width="1891" height="992" alt="image" src="https://github.com/user-attachments/assets/a96fa23b-e69e-4191-8267-fa7acfacd2b3" />
+
 
 ---
 
 ### BYBANKANSCTRL
 
 **Before Hardening**
-![BYBANKANSCTRL Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYBANKANSCTRL.png)
+<img width="1884" height="917" alt="image" src="https://github.com/user-attachments/assets/400e2edd-8076-4f7a-ba9b-b3da57295041" />
+
 
 **After Hardening**
-![BYBANKANSCTRL After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKANSCTRL.png)
+<img width="1891" height="915" alt="image" src="https://github.com/user-attachments/assets/9f0ab5a4-c31b-472e-8680-dcfd56546698" />
+
 
 ---
 
 ### BYBANKWeb
 
 **Before Hardening**
-![BYBANKWeb Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYBANKWEB.png)
+<img width="1894" height="915" alt="image" src="https://github.com/user-attachments/assets/e25c13a9-6124-4747-b9f9-5bcfe8be584e" />
+
 
 **After Hardening**
-![BYBANKWeb After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKWEB.png)
+<img width="1888" height="912" alt="image" src="https://github.com/user-attachments/assets/3249d856-615f-4221-823e-42c77726ccd8" />
+
 
 ---
 
 ### BYBANKWAZUH
 
 **Before Hardening**
-![BYBANKWAZUH Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYBANKWAZUH.png)
+<img width="1892" height="917" alt="image" src="https://github.com/user-attachments/assets/a8b4f458-48da-490e-93b3-cfe60e9c86a1" />
+
 
 **After Hardening**
-![BYBANKWAZUH After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKWAZUH.png)
+<img width="1891" height="915" alt="image" src="https://github.com/user-attachments/assets/a3febe21-4ba6-40cb-8620-582ea84fdcc7" />
+
 
 ---
 
