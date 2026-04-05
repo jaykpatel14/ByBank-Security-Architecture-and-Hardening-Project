@@ -113,7 +113,7 @@ Wazuh was used to run CIS benchmark checks on all endpoints before and after app
 ### BYBANKSPLUNK
 
 **Before Hardening**
-![BYBANKSPLUNK Before](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYYBANKSPLUNK.png)
+![BYBANKSPLUNK Before](Stage-4-Hardening/Linux_hardening/Screenshots/Before - BYYBANKSPLUNK.png)
 
 **After Hardening**
 ![BYBANKSPLUNK After](jaykpatel14/ByBank-Security-Architecture-and-Hardening-Project/Stage-4-Hardening/Linux_hardening/Screenshots/After - BYBANKSPLUNK.png)
